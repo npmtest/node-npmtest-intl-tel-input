@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-intl-tel-input",     "homepage": "https://github.com/npmtest/node-npmtest-intl-tel-input",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-intl-tel-input.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [intl-tel-input (v11.0.11)](https://github.com/jackocnr/intl-tel-input#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-intl-tel-input.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-intl-tel-input) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-intl-tel-input.svg)](https://travis-ci.org/npmtest/node-npmtest-intl-tel-input)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-intl-tel-input",
+    "keywords": [
+        "coverage",
+        "test",
+        "intl-tel-input"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_intl_tel_input.js",
+    "name": "npmtest-intl-tel-input",
+    "nameAlias": "npmtest_intl_tel_input",
+    "nameOriginal": "npmtest-intl-tel-input",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-intl-tel-input.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "2017.4.26"
+}
